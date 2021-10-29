@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Интернет-магазин</title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <h1>Связаться с нами!</h1>
+    <form id="feedback">
+        Фамилия:
+        <br>
+        <input type="text" name="1name" id="lastname">
+        <br>
+        Имя:
+        <br>
+         <input type="text" name="2name" id="firstname">
+        <br>
+        Отчество:
+         <br>
+         <input type="text" name="3name" id="patronymic">
+        <br>
+        <p> Тема сообщения:
+            <select name="Spisok" id="topic">
+     <option value="1"> Предложение</option>
+                 <option value="2"> Проблема</option>
+                 <option value="3"> Жалоба</option>
+            </select>
+        </p>
+            <input type="checkbox" id="email">
+            <br>
+        <input type="submit" name="fl" id="send">
+            <input type="reset" name="fl" id="clear">            
+    </form>
+</body>
+</html> 

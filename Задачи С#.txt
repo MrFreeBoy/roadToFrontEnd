@@ -1,0 +1,1504 @@
+        
+
+     		int n = Convert.ToInt32(Console.ReadLine());
+            int c = Convert.ToInt32(Console.ReadLine());
+            int d = Convert.ToInt32(Console.ReadLine());
+            for (int i = 1; i <= n; i++)
+            {
+                if (i % c == 0 && i % d != 0)
+
+                {
+                    Console.WriteLine(i);
+                    break;
+                }              
+            }
+			
+			
+			
+			Поиск одинаковой строки
+			
+			string s = Convert.ToString(Console.ReadLine());
+
+            for (int i = 1; i <= 100; i++)
+            {
+                string r = Convert.ToString(Console.ReadLine());
+                if (s == r)
+                {
+
+                    Console.WriteLine(i);
+                    break;
+                }
+            }
+			
+			
+			Анализ трехзначных чисел
+            Напишите программу, которая в последовательности трехзначных чисел находит количество всех чисел сумма цифр которых равна 8
+			
+			int d = 0;
+            for (int i = 100; i <= 999; i++)
+            {
+                int a = i % 10;
+                int b = i / 10;
+                b = b % 10;
+                int c = i / 100;               
+                    if (a + b + c == 8)
+
+                    {
+                        d++;
+                    }
+            }
+            Console.WriteLine(d);
+			
+			Напишите программу, которая выводит все двузначные числа, которые равны удвоенному произведению своих цифр.
+В ответе запишите найденные числа через запятую без пробелов.
+
+            int d = 0;
+            for (int i = 10; i <= 99; i++)
+            {
+                int a = i % 10;
+                int b = i / 10;
+                          
+                    if (i==2*a*b)
+
+                    {
+                        d++;
+                    Console.WriteLine(i);
+                }
+            }
+			
+			Совершенное число — натуральное число, равное сумме всех своих собственных делителей (то есть всех положительных делителей, отличных от самого числа).
+			
+			for (int x = 1; x < 10000; x++)
+            {
+                int s = 0;
+                for (int d = 1; d < x; d++)
+                {
+                    if (x % d == 0)
+                        s += d;
+                }
+                if (s == x)
+                    Console.WriteLine(x);
+            }
+			
+			Сложное кубическое уравнение
+			
+			double a = Convert.ToDouble(Console.ReadLine());
+            double b = Convert.ToDouble(Console.ReadLine());
+            double c = Convert.ToDouble(Console.ReadLine());
+            double d = Convert.ToDouble(Console.ReadLine());
+            double e = Convert.ToDouble(Console.ReadLine());
+            int f = 0;
+            for (int x = 0; x <= 1000; x++)
+            {
+                
+                if ((a * x * x * x + b * x * x + c * x + d)/(x-e) == 0 && e!=x)
+                {
+                    f++;
+                    
+                }
+            }
+            Console.WriteLine(f);
+			
+			
+			
+			Нахождение максимума чисел
+			
+			int n = Convert.ToInt32(Console.ReadLine()); // количество чисел в последовательности
+            int number;
+			int max = 0; // значение 0 заведомо меньше возможных значений последовательности
+			for (int i = 0; i < n; i++)
+           {
+            number = Convert.ToInt32(Console.ReadLine()); // очередное число последовательности
+            if (number > max) // сравниваем текущее число с мах
+           {
+             max = number; // если больше, то обновляем мах
+           }
+           }
+
+             Console.WriteLine(max); // после просмотра всех чисел п
+			 
+			 
+			 Нахождение минимума чисел
+			 
+			  int n = Convert.ToInt32(Console.ReadLine()); 
+            int number;
+            int min = 1000000;
+            for (int i = 0; i < n; i++)
+            {
+                number = Convert.ToInt32(Console.ReadLine());
+               
+                if (number < min) 
+                {
+                    min = number; 
+                }
+ 
+            }
+
+            Console.WriteLine(min); 
+			
+			
+			Разница между экстремумами max & min 
+			
+			
+			 int n = Convert.ToInt32(Console.ReadLine()); 
+            int number;
+            int max = -1000000;
+            int min = 1000000;
+            for (int i = 0; i < n; i++)
+            {
+                number = Convert.ToInt32(Console.ReadLine()); 
+                if (number > max) 
+                {
+                    max = number; 
+                }
+                if (number < min)
+                {
+                    min = number;
+                }
+
+            }
+
+            Console.WriteLine(max - min); 
+			
+			
+			Максимальная и минимальная скорость передвижения 
+			
+			int n = Convert.ToInt32(Console.ReadLine()); 
+            int number;
+            int max = 1;
+            int min = 300;
+            for (int i = 1; i <= n; i++)
+            {
+                number = Convert.ToInt32(Console.ReadLine()); 
+                if (number > max) 
+                {
+                    max = number; 
+                }
+                if (number < min)
+                {
+                    min = number;
+                }
+
+            }
+            if (min < 30)
+            {
+                string yes = max + " " + "YES";
+                Console.WriteLine(yes);
+            }
+            else
+            {
+                string no = max + " " + "NO";
+                Console.WriteLine(no);
+            }
+			
+			Выведите значение второго по величине элемента.
+			
+			int n = 1;
+            int max = 1;
+            int max1 = 0;
+            while (n > 0 && n<=1000)
+            {
+                int number = Convert.ToInt32(Console.ReadLine());
+                if (number > max && number!=0)
+                {
+                    max1 = max;
+                    max = number;
+                }
+                if (number < max && number>max1)
+                {
+                    max1 = number;   
+                }
+                if (number == 0)
+                {
+                    Console.WriteLine(max1);
+                    break;
+                }                
+            }
+			
+			
+			
+			Палинром 
+			
+			int n = Convert.ToInt32(Console.ReadLine());
+            int a = n;
+            int d = 0;
+            while (a > 0)
+            {
+                d = d * 10 + a % 10;
+                a = a / 10;
+
+            }
+
+            if (n == d)
+            {
+                Console.WriteLine("YES");
+            }
+            else
+            {
+                Console.WriteLine("NO");
+            }
+			
+			
+			
+		Убрать из числа цифры 5 и 7. + ПЕРЕВЕРТЫВАНИЕ цифр 
+	
+	int n = Convert.ToInt32(Console.ReadLine());
+            string s ="";
+            for (int i = 0; n!=0; i++)
+            
+                { 
+                if (n%10 != 5 && n%10 != 7)
+                
+                    s =(n%10)+ s;
+                    n = n / 10;
+
+                }
+               
+                Console.Write(s);
+				
+				
+				Возведение в степерь без Math.Pow
+				
+				
+				int a = Convert.ToInt32(Console.ReadLine());
+            int n = Convert.ToInt32(Console.ReadLine());
+            int b = 1;
+            
+            for (int i = 0; i< n; i++)
+
+            {
+               
+                b *=a;
+
+            }
+            Console.Write(b);
+			
+			
+			
+			
+			Количество минимумов
+            Найдите количество минимальных элементов в последовательности. + СЧЕТЧИК!!!!
+			
+			int n = Convert.ToInt32(Console.ReadLine());
+            int number;
+            int min = 1000000;
+            int b = 1; //ЗАДАЕМ СЧЕТЧИК
+
+            for (int i = 0; i < n; i++)
+            {
+               
+                number = Convert.ToInt32(Console.ReadLine());
+
+                if (number < min)
+                {
+                    min = number;
+                    b = 1; // ОБНОВЛЕНИЕ СЧЕТЧИКА
+
+                }
+                else if (number == min)
+                {
+                    b++; //УВЕЛИЧИВАЕМ ТОЛЬКО КОГДА ВВВОДИТСЯ УЖЕ МИНИМАЛЬНОЕ ЗНАЧЕНИЕ
+                }
+                         
+            }
+
+            Console.WriteLine(b);
+			
+			
+			
+			
+			Цифровой корень Суммируем цифры до получения однозначного значения
+			
+			
+		 int N = Convert.ToInt32(Console.ReadLine());
+            int m = 0;
+            while (N != 0)
+            {
+                m = m + N % 10;
+                N = N / 10;
+                m = m / 10 + m % 10;
+            }
+            Console.WriteLine(m);
+			
+			
+			Самое большое число на отрезке, кратное 7
+			
+			 int a = Convert.ToInt32(Console.ReadLine());
+            int b = Convert.ToInt32(Console.ReadLine());
+            int max = -20000;
+            int d = 0;
+            for (int i = a; i <= b; i++)
+            {
+                if (i > max && i % 7 == 0)
+                {
+                    max = i;
+                    d++;
+                }               
+            }      
+            if (d>0)
+                Console.WriteLine(max);
+            else
+                Console.WriteLine("NO");
+				
+				
+				
+				
+				Красивый год
+				Выведите единственное целое число — минимальный номер года, который строго больше y, в котором все цифры различны. 
+				
+				int y = Convert.ToInt32(Console.ReadLine());
+            int a = 0;
+            int b = 0;
+            int c = 0;
+            int d = 0;
+            for (int i = y + 1; i <= 90000; i++)
+            {
+                a = i % 10;
+                b = i / 10;
+                b = b % 10;
+                c = i / 100;
+                c = c % 10;
+                d = i / 1000;
+
+                if (a != b && a != c && a != d && b != c && b != d && c != d)
+
+                {
+                    Console.Write(i);
+                    break;
+                }
+            }
+			
+			
+			Автоморфные числа 
+			Автоморфное число — неотрицательное целое число, десятичная запись квадрата которого оканчивается цифрами самого этого числа. 
+			
+			int k = Convert.ToInt32(Console.ReadLine());
+            double a = 0;
+            double b = 0;
+            for (int i = 0; i <= k; i++)
+            {
+                 a = Math.Pow(i, 2);
+                b = a;
+                 if(b % 10==i ||b%100==i||b%1000==i || b % 10000 == i|| b % 100000 == i|| b % 1000000 == i)
+
+                    Console.Write(i+" ");
+            }
+			
+			
+			Является ли введенный символ ЦИФРОЙ ?
+			
+			char c = Convert.ToChar(Console.ReadLine());
+            if(c>='0' && c<='9')
+            {
+                Console.WriteLine("YES");
+            }
+            else Console.WriteLine("NO");
+			
+			
+			По заданной строчной букве латинского алфавита, выведите все строчные буквы латинского алфавита, начиная от начала до заданной буквы.
+			
+			char c = Convert.ToChar(Console.ReadLine());
+            for (char i = 'a'; i <= c; i++)
+            {
+                Console.Write(i+" ");
+            }
+			
+			Изменить регистр символа
+			Измените регистр символа, если он был латинской буквой: сделайте его заглавным, если он был строчной буквой и наоборот.
+
+            char c = Convert.ToChar(Console.ReadLine());
+            int a = (int)c;
+            if (c >= 'A' && c <= 'Z')
+                a = a + 32;
+            else a = a - 32;
+            char b = (char)a;
+            
+                Console.WriteLine(b);  
+				
+				
+				
+				
+				
+				Количество слов
+             Дана строка, содержащая пробелы. Найдите, сколько в ней слов.
+				
+				string a = Convert.ToString(Console.ReadLine());
+            int countchar = a.Length; // Колличество символов в строке
+            int count0 = 0;    // Счетчик Нулей
+            for (int i = 0; i <= countchar - 1; i++)
+            {
+                if (a[i] == ' ')
+                {
+                    count0++;
+                }
+            }
+            
+                Console.WriteLine(count0+1);
+				
+				
+				
+				
+				Перевертыш
+			Дана строка. Найдите перевернутую ей строку.
+				string a = Convert.ToString(Console.ReadLine());
+            int countchar = a.Length;
+            for (int i = countchar - 1; i >=0; i--)
+            {
+                char b = a[i];
+                Console.Write(b);
+            }
+			
+			
+			
+			Дана строка. Удалите K-тый символ в ней.
+			
+			string s = Convert.ToString(Console.ReadLine());
+            int k = Convert.ToInt32(Console.ReadLine());
+            int countchar = s.Length;
+            for (int i = 0; i <= countchar - 1; i++)
+            {
+                if (i == k - 1)
+                    continue;
+                char b = s[i];
+                Console.Write(b);
+            }
+			
+			
+			
+			Какой символ встречается раньше?
+			
+			string s = Convert.ToString(Console.ReadLine());
+            int countchar = s.Length;
+            int countx = 0;
+            int countw = 0;
+            for (int i = 0; i <= countchar - 1; i++)
+            {
+                if (s[i] == 'x')
+                {
+                    countx++;
+                    Console.WriteLine('x');
+                    break;
+                }
+                if (s[i] == 'w')
+                {
+                    countw++;
+                    Console.WriteLine('w');
+                    break;
+                }
+            }
+            if (countx == 0 && countw == 0)
+      
+                Console.WriteLine(-1);
+				
+				
+				
+				
+				
+			Полиндром со знаками!
+			
+			string s = Convert.ToString(Console.ReadLine());
+            int countchar = s.Length;
+            string b = "";
+            for (int i = 0; i <= countchar - 1; i++)
+            {
+                b = s[i] + b;
+            }
+            if (b == s)
+            Console.WriteLine("YES");
+            else
+            Console.WriteLine("NO");
+			
+			Найти 2 одинаковые буквы в строке 
+			
+			string s = Convert.ToString(Console.ReadLine());
+            int countchar = s.Length;
+            for (int i = 0; i <= countchar - 1; i++)
+            {
+                for (int j = i + 1; j <= countchar - 1; j++)
+                {
+                    if (s[i] == s[j])
+                    {
+                        Console.Write(s[i]);
+                        break;
+                    }
+                }
+            }
+			
+			
+			Идентификатор
+			Определить, является ли введенное слово идентификатором, т.е. начинается ли оно с английской буквы в любом регистре или знака 
+			подчеркивания и не содержит других символов, кроме букв английского алфавита (в любом регистре), цифр и знака подчеркивания.
+			
+			
+			
+			string s = Convert.ToString(Console.ReadLine());
+            int countchar = s.Length;
+            int count = 0;
+            int count1 = 0;
+            for (int i = 0; i <= 0; i++)
+            {
+                {
+                    if (s[i] >= 'A' && s[i] <= 'Z' || s[i] >= 'a' && s[i] <= 'z' || s[i] == '_' && i == 0)
+                        count++;
+                }   
+            }
+            for (int a = 1; a <= countchar - 1; a++)
+            {
+                if (s[a] >= '0' && s[a] <= '9' || s[a] >= 'A' && s[a] <= 'Z' || s[a] >= 'a' && s[a] <= 'z' || s[a] == '_')
+                    count1++;
+            }
+            int b = (count + count1);
+            //Console.WriteLine(count); // ПОДСКАЗКА !!! Считаем все входящие данные и данные после циклов и сравниваем их.
+            //Console.WriteLine(count1);
+            //Console.WriteLine(countchar);
+            //Console.WriteLine(b);
+            if (b == countchar)
+                Console.WriteLine("YES");
+            else
+                Console.WriteLine("NO");
+				
+				
+				
+				Нормируй строку!
+				string s = Convert.ToString(Console.ReadLine());
+            int countchar = s.Length;
+            //int count = 0;
+
+            //char a;
+            for (int i = 0; i <= countchar - 1; i++)
+            {
+                if (s[i] != ' ' || s[i] == ' ' && s[i + 1] != ' ')
+
+                    Console.Write(s[i]);
+                else continue;
+            }
+			
+			
+			
+			
+			Выписать Ктый символ, если его нет NO
+			 string s = Convert.ToString(Console.ReadLine());
+            int k = Convert.ToInt32(Console.ReadLine());
+            int countchar = s.Length;
+            for (int i = 0; i <= countchar - 1; i++)
+            {
+                if (i == k - 1)
+                {
+                    Console.Write(s[i]);
+                    break;
+                }
+            }
+            if (k > countchar)
+                Console.Write("NO");
+    }
+	
+	
+	
+	
+			Часть алфавита
+			Даны две строчные буквы латинского алфавита. 
+			Выведите все строчные буквы латинского алфавита в алфавитном порядке, которые находятся между данными символами, а также их самих. 
+			
+			  char a = Convert.ToChar(Console.ReadLine());
+            char b = Convert.ToChar(Console.ReadLine());
+            
+            if(a<=b)
+            for (char i = a ; i <= b; i++)
+            {
+                Console.Write(i + " ");
+            }
+            if(a>b)
+                for (char i = b; i <= a; i++)
+                {
+                    Console.Write(i + " ");
+                }
+				
+				
+				
+				
+			Инициалы
+			По данным ФИО сформируйте строку, содержащую фамилию с инициалами. 
+			Например, по ‘Ivanov Ivan Ivanovich’ получите "Ivanov I.I.".
+				
+				Решение ребят
+				string a = Console.ReadLine();
+				string b = Console.ReadLine();
+				string c = Console.ReadLine();
+				Console.Write(a + " " + b[0] + "." + c[0] + ".");
+				
+				Мое решение 
+				string a = Convert.ToString(Console.ReadLine());
+            string b = Convert.ToString(Console.ReadLine());
+            string c = Convert.ToString(Console.ReadLine());
+
+            int countcharb = b.Length;
+            int countcharc = c.Length;
+            for (int i = 0; i <= countcharb-1; i++)
+                if (i == 0)
+                {
+                    break;
+                }
+            for (int i = 0; i <= countcharc - 1; i++)
+                if (i == 0)
+                {
+                    Console.Write(a + " " + b[i] + '.' + c[i] + '.');
+                    break;
+                }
+				
+				
+				Индексация в строке
+				Даны две строки. 
+				Верно ли, что первая строка начинается на ту же букву, на которую заканчивается вторая строка? 
+				Регистр букв имеет значение, то есть 'a' и 'A' считаются разными буквами.
+				
+				
+				    string a = Convert.ToString(Console.ReadLine());
+					string b = Convert.ToString(Console.ReadLine());
+					int countcharb = b.Length;
+			int c = countcharb - 1;
+            if (a[0]==b[c])
+                    Console.WriteLine("YES");
+            else
+                Console.WriteLine("NO");
+				
+				
+				
+				
+				
+				Гласные буквы
+				Дано предложение, составленное из строчных букв латинского алфавита. Определить, сколько в нем гласных букв.
+				Гласными считаются буквы  a, e, i, o, u.
+				string a = Convert.ToString(Console.ReadLine());
+            int countchara = a.Length;
+            int b = 0;
+            for (int i = 0; i <= countchara - 1; i++)
+                if (a[i] == 'a' || a[i] == 'e' || a[i] == 'i' || a[i] == 'o' || a[i] == 'u')
+                    b++;
+                Console.WriteLine(b);
+				
+				
+				
+				
+				Формирование строки
+				Дано предложение, составленное из строчных букв латинского алфавита. 
+				Все буквы 'e' в нем заменить буквой 'i'.
+				
+				string a = Convert.ToString(Console.ReadLine());
+            int countchara = a.Length;
+            for (int i = 0; i <= countchara - 1; i++)
+            {
+                if (a[i] == 'e')
+                {
+                    Console.Write("i");
+                }
+                else
+                {
+                    Console.Write(a[i]);
+                }
+            }       
+			
+			
+			
+			
+			Цифры в тексте
+            Дан текст, составленный из букв латинского алфавита и цифр. Напечатать все имеющиеся в нем цифры.
+			
+			 string a = Convert.ToString(Console.ReadLine());
+            int countchara = a.Length;
+            for (int i = 0; i <= countchara - 1; i++)
+            {
+                if (a[i] >= '0' && a[i]<='9')
+                
+                    Console.Write(a[i]+" ");   
+            }       
+			
+			
+			
+			Слишком длинные слова
+			
+			
+			int a = Convert.ToInt32(Console.ReadLine());
+            for (int i = 1; i <= a; i++)
+            {
+                string s = Convert.ToString(Console.ReadLine());
+                int countchars = s.Length;
+                int x = countchars - 2;
+                
+                if (countchars > 10)
+                {
+                    Console.WriteLine(s[0] + "" + x + "" + s[countchars-1]);
+                }
+                else
+                {
+                    Console.WriteLine(s);
+                }
+
+            }
+			
+			
+			
+			Имя файла СЧИТАЕМ И УДАЛЯЕМ Х-ы
+			
+			int a = Convert.ToInt32(Console.ReadLine());
+            string s = Convert.ToString(Console.ReadLine());
+            int y = 0; // Счетчик Х-ов
+            int x = 0; // Счетчик Х-ов больше двух подряд
+            for (int c = 0; c < a; c++)
+            {
+
+                if (s[c] == 'x') // Проверка на принадлежность к Х
+                {
+                    y++;
+                    if (y >= 3)
+                        x++;
+                }
+                else  // Если принадлжености к Х меньше 2, обнуляем счетчик
+                {
+                    y = 0;
+                }  
+                
+            }
+            Console.Write(x);  //Выводим лишнии Х больше двух подряд 
+			
+			
+			
+			
+			
+			Азбука Арторзе
+			
+			string a = Convert.ToString(Console.ReadLine());
+            int countchara = a.Length;
+            //int b = 0;
+            for (int i = 0; i <= countchara - 1; i++)
+            {
+                if (a[i] == '.')  //Если знак равен точке выписываем его в консоль
+                {
+                    Console.Write("0");
+                }
+                else {
+                    i++;     //Если знак не равен точке переходим к слудующему знаку
+                    if (a[i] == '.')   //Если знак снов равен точке пишем 1 , если нет то 2 
+                    {
+                        Console.Write("1");
+                    }
+                    else
+                    {
+                        Console.Write("2");
+                    }
+                }
+
+            }
+			
+			+++ Решение через замену "Replace"
+
+  string s = Console.ReadLine();
+            s = s.Replace("--", "2");
+            s = s.Replace("-.", "1");
+            s = s.Replace(".", "0");
+            Console.WriteLine(s);			
+			
+			
+			
+			
+			
+			
+			
+			Дан массив, состоящий из целых чисел. 
+			Напишите программу, которая выведет элементы массива, индексы которых кратны трем (0, 3, 6...).
+			int n = Convert.ToInt32(Console.ReadLine());
+            string s = Console.ReadLine();
+            string[] ss = s.Split(' ');
+            int[] numbers = new int[n];
+            for (int i = 0; i < n; i++)
+            {
+                int number = Convert.ToInt32(ss[i]);
+                numbers[i] = number;
+                if (i%3==0)
+                {
+                    Console.Write(numbers[i] + " ");
+                }
+            }
+			
+			
+			
+			
+			
+			Дан массив, состоящий из целых чисел. 
+			Напишите программу, которая выводит те элементы массива, которые кратны трем.
+			
+			int n = Convert.ToInt32(Console.ReadLine());
+            string s = Console.ReadLine();
+            string[] ss = s.Split(' ');
+            int[] numbers = new int[n];
+            for (int i = 0; i < n; i++)
+            {
+                int number = Convert.ToInt32(ss[i]);
+                numbers[i] = number;
+                if (number % 3==0)
+                {
+                    Console.Write(numbers[i] + " ");
+                }
+            }
+			
+			
+			
+			Количество элементов, больших предыдущего
+			
+			int n = Convert.ToInt32(Console.ReadLine());
+            string s = Console.ReadLine();
+            string[] ss = s.Split(' ');
+            int[] numbers = new int[n];
+            int a = 0;
+            int b = 0;
+            int c = 0;
+            for (int i = 0; i < n; i++)
+            {      
+                int number = Convert.ToInt32(ss[i]);
+                numbers[i] = number;
+                b = number;            
+                if (c<b)
+                {
+                    a++;
+                }
+                   c = b;
+            }
+            Console.Write(a-1);
+			
+			2ой вариант 
+			int n = Convert.ToInt32(Console.ReadLine());
+            string s = Console.ReadLine();
+            string[] ss = s.Split(' ');
+            int[] numbers = new int[n];
+            int a = 0;
+            for (int i = 0; i < n; i++)
+            {      
+                int number = Convert.ToInt32(ss[i]);
+                numbers[i] = number;           
+                if (i > 0 && numbers[i]> numbers[i-1] )
+                
+                    a++;
+                
+            }
+            Console.Write(a);
+			
+			
+			
+			Переставить соседние элементы
+			Напишите программу, которая переставляет соседние элементы массива (1-й элемент поменять с 2-м, 3-й с 4-м и т.д. 
+			Если элементов нечетное число, то последний элемент остается на своем месте).
+			
+			int n = Convert.ToInt32(Console.ReadLine());
+            string s = Console.ReadLine();
+            string[] ss = s.Split(' ');
+            int[] numbers = new int[n];
+            for (int i = 0; i < n; i++)
+            {
+                int number = Convert.ToInt32(ss[i]);
+                numbers[i] = number;
+                if (i % 2 == 1) // Каждый 2ой индекс в последовательности 
+                    Console.Write(numbers[i] + " " + numbers[i - 1] + " ");
+                else if (i == n - 1) // Последний индекс последовательности 
+                    Console.Write(numbers[i]);
+
+            }
+			
+			
+			Есть ли два элемента с одинаковыми знаками
+			Дан массив, состоящий из целых чисел. 
+			Напишите программу, которая определяет, есть ли в массиве пара соседних элементов с одинаковыми знаками.
+			
+			int n = Convert.ToInt32(Console.ReadLine());
+            string s = Console.ReadLine();
+            string[] ss = s.Split(' ');
+            int[] numbers = new int[n];
+            int a = 0;
+            for (int i = 0; i < n; i++)
+            {
+                int number = Convert.ToInt32(ss[i]);
+                numbers[i] = number;
+
+                if (i % 2 == 1 && numbers[i] >= 0 && numbers[i - 1] >= 0 || i % 2 == 1 && numbers[i] <= 0 && numbers[i - 1] <= 0)
+                    a++;
+            }
+            if(a>0)
+            Console.Write("YES");
+            else
+            Console.Write("NO"); ///////////// НЕ ПРОШЕЛ ТЕСТ!!!
+			
+			Ответ КУРМЫСЫ
+			int n = Convert.ToInt32(Console.ReadLine());
+			int k = 0;
+			string[] s = Console.ReadLine().Split();
+			int[] a = new int[n];
+			for (int i = 0; i < s.Length; i++) {
+            a[i] = Convert.ToInt32(s[i]);
+            if (i > 0 && a[i]*a[i-1] > 0)
+                k++;
+			}
+			if (k > 0)
+            Console.Write("YES");
+			else
+            Console.Write("NO");
+			
+			
+			
+			
+			Циклический сдвиг вправо
+			
+			 int n = Convert.ToInt32(Console.ReadLine());
+            string s = Console.ReadLine();
+            string[] ss = s.Split(' ');
+            int[] numbers = new int[n];
+            int a = numbers[n - 1];
+            for (int i = 0; i < n; i++)
+            {
+                int number = Convert.ToInt32(ss[i]);
+                numbers[i] = number;
+            }
+            for (int i = 0; i < n; i++)
+            {  if (i == 0)
+                {
+                    Console.Write(numbers[n - 1] + " ");
+                }
+                if (i <= n && i >= 1)
+                {
+                    Console.Write(numbers[i - 1] + " ");
+                }
+            }
+			
+			
+			Перевертыш!!!
+			
+			string s = Console.ReadLine();
+			string[] ss = s.Split(' ');
+			int length = ss.Length;
+			for (int i = 0; i < length / 2; i++)
+			{
+			string tmp = ss[i];
+			ss[i] = ss[length - 1 - i];
+			ss[length - 1 - i] = tmp;
+			}
+			for (int i = 0; i < length; i++)
+			{
+			Console.Write(ss[i] + " ");
+			}
+			
+			
+			
+			Индекс минимального элемента
+
+			int n = Convert.ToInt32(Console.ReadLine());
+            string s = Console.ReadLine();
+            string[] ss = s.Split(' ');
+            int[] numbers = new int[n];
+            for (int i = 0; i < n; i++)
+            {
+                int number = Convert.ToInt32(ss[i]);
+                numbers[i] = number;
+            }
+            int min = 1000000;
+            int indexMin = 0;
+            for (int i = 0; i < n; i++)
+            {
+                if (numbers[i] < min )
+                {
+                    min = numbers[i];
+                    indexMin = i;
+                }
+            }
+            //Console.WriteLine(min);
+            Console.WriteLine(indexMin);
+			
+			
+			
+			
+			Уменьшить все элементы массива на минимальный элемент
+			
+			int n = Convert.ToInt32(Console.ReadLine());
+            string s = Console.ReadLine();
+            string[] ss = s.Split(' ');
+            int[] numbers = new int[n];
+            for (int i = 0; i < n; i++)
+            {
+                int number = Convert.ToInt32(ss[i]);
+                numbers[i] = number;
+            }
+            int min = 10000;
+            int indexMin = 0;
+            for (int i = 0; i < n; i++)
+            {
+                if (numbers[i] < min)
+                {
+                    min = numbers[i];
+                    indexMin = i;
+                }               
+            }
+            for (int i = 0; i < n; i++)
+            Console.Write(numbers[i] - min + " ");
+			
+			
+			Разность индексов максимума и минимума
+			
+			int n = Convert.ToInt32(Console.ReadLine());
+            string s = Console.ReadLine();
+            string[] ss = s.Split(' ');
+            int[] numbers = new int[n];
+            for (int i = 0; i < n; i++)
+            {
+                int number = Convert.ToInt32(ss[i]);
+                numbers[i] = number;
+            }
+            int min = 10000;
+            int indexMin = 0;
+            for (int i = 0; i < n; i++)
+            {
+                if (numbers[i] < min)
+                {
+                    min = numbers[i];
+                    indexMin = i;
+                }               
+            }
+            int max = numbers[0];
+            int indexMax = 0;
+            for (int i = 0; i < n; i++)
+            {
+                if (numbers[i] > max)
+                {
+                    max = numbers[i];
+                    indexMax = i;
+                }
+            }
+          
+            Console.Write(indexMax-indexMin);
+			
+			
+			
+			
+			
+			Поменять местами первый минимум и последний максимум
+			Необходимо вывести массив, в котором поменяны местами первый минимальный и последний максимальный элементы массива.
+			// Нашли первый минимум и последний максимум и затем поменяли их местами. Много КОДА МНОГО ЗАМЕН!!!
+						
+			int n = Convert.ToInt32(Console.ReadLine());
+            string s = Console.ReadLine();
+            string[] ss = s.Split(' ');
+            int[] numbers = new int[n];
+            for (int i = 0; i < n; i++)
+            {
+                int number = Convert.ToInt32(ss[i]);
+                numbers[i] = number;
+            }
+            int min = 10000;
+            int indexMin = 0;
+            int a =0;
+            for (int i = 0; i < n; i++)
+            {
+                if (numbers[i] < min)
+                {
+                    min = numbers[i];
+                    indexMin = i;
+                    a = min;
+                }
+                if (numbers[i] > a)
+                {
+                    break;
+                }
+            }
+            int d = indexMin;
+            int max = numbers[0];
+            int indexMax = 0;
+            int c = 0;
+            int indexc = 0;
+            for (int i = 0; i < n; i++)
+            {
+                if (numbers[i] > max)
+                {
+                    max = numbers[i];
+                    indexMax = i;
+                }
+                if (max <= numbers[i])
+                {
+                    c = max;
+                    indexc = i;
+                }
+            }
+            int t = numbers[indexMin];
+            numbers[indexMin] = numbers[indexc]; ;
+            numbers[indexc] = t;
+            
+            for (int i = 0; i <n; i++)               
+            {
+                Console.Write(numbers[i]+" ");   
+            }
+			
+			
+			
+			
+			Палиндром 
+			
+			int n = Convert.ToInt32(Console.ReadLine());
+            string s = Console.ReadLine();
+            string[] ss = s.Split(' ');
+            int[] numbers = new int[n];
+            int length = ss.Length;
+            for (int i = 0; i < n; i++)
+            {
+                int number = Convert.ToInt32(ss[i]);
+                numbers[i] = number;
+            }
+            int k = 0;
+            for (int i = 0; i < s.Length / 2; i++)
+            {
+                if (s[i] != s[s.Length - i - 1])
+                {
+                    Console.Write("NO");
+                    k++;
+                    break;
+                }
+            }
+            if (k == 0)
+                Console.Write("YES");
+			
+			
+			
+			
+			Вложенные циклы
+			Разберем задачу. Дан массив чисел. Нужно вывести какое количество чисел от 0 до 9 встречается в данном массиве.
+
+
+			int n = Convert.ToInt32(Console.ReadLine());
+            string s = Console.ReadLine();
+            string[] ss = s.Split(' ');
+            int[] numbers = new int[n];
+            int length = ss.Length;
+            for (int i = 0; i < n; i++)
+            {
+                int number = Convert.ToInt32(ss[i]);
+                numbers[i] = number;
+            }
+            for (int i = 0; i < 10; i++)
+            {
+                int cnt = 0;
+                for (int j = 0; j < n; j++)
+                {
+                    if (numbers[j] == i)
+                    {
+                        cnt++;
+                    }
+                }
+                // в этом моменте мы уже сравнили все числа с i
+                Console.WriteLine("Количество чисел " + i + " равно " + cnt);
+            }
+			
+			
+			
+			
+			
+					
+					
+					
+			Два одинаковых элемента
+			Дан массив, состоящий из целых чисел. Напишите программу, которая определяет, есть ли в массиве ХОТЯ БЫ два одинаковых элемента.
+					
+			int n = Convert.ToInt32(Console.ReadLine());
+            string s = Console.ReadLine();
+            string[] ss = s.Split(' ');
+            int[] numbers = new int[n];
+            int length = ss.Length;
+            for (int i = 0; i < n; i++)
+            {
+                int number = Convert.ToInt32(ss[i]);
+                numbers[i] = number;
+            }
+            int a = 0;
+            for (int i = -10000; i < 10000; i++)
+            {
+                int cnt = 0;
+                for (int j = 0; j < n; j++)
+                {
+                    if (numbers[j] == i )
+                        cnt++;        
+                }
+                a = cnt;
+                if (a > 1)
+                {
+                    Console.WriteLine("YES");
+                    break;
+                }      
+            }
+            if (a < 1)
+            {
+                Console.WriteLine("NO");
+            }
+			
+			
+			Единственные элементы
+			Дан список. Выведите те его элементы, которые встречаются в списке только один раз.
+			
+			
+			int n = Convert.ToInt32(Console.ReadLine());
+            string s = Console.ReadLine();
+            string[] ss = s.Split(' ');
+            int[] numbers = new int[n];
+            int length = ss.Length;
+            for (int i = 0; i < n; i++)
+            {
+                int number = Convert.ToInt32(ss[i]);
+                numbers[i] = number;
+            }
+            for (int a = 0; a <n; a++)
+            {
+                int cnt = 0;
+                for (int j = 0; j < n; j++)
+                {
+                    if (numbers[j] == numbers[a])
+                    {
+                        cnt++;
+                    }
+                }
+                // в этом моменте мы уже сравнили все числа с i
+                if(cnt==1)
+                Console.Write(numbers[a] + " ");
+			}
+			
+			
+			
+					
+		
+			Побочная диагональ
+			Дано число n, n\le100n,n≤100. Создайте массив n\times nn×n и заполните его по следующему правилу:
+			числа на диагонали, идущей из правого верхнего в левый нижний угол, равны 1;
+			числа, стоящие выше этой диагонали, равны 00;
+			числа, стоящие ниже этой диагонали, равны 22.
+			
+			int n = Convert.ToInt32(Console.ReadLine());
+            int[,] a = new int[n,n];
+            //for(int i=0; i<n;i++)
+            //{
+            //    string s = Console.ReadLine();
+            //    string[] ss = s.Split(' ');
+            //    for (int j = 0; j < n; j++)
+            //    {
+            //        a[i,j] = Convert.ToInt32(ss[j]);
+            //    }
+            //}
+            for (int i = 0; i < n; i++)
+            {
+                for (int j = n-1; j >= 0; j--) //Развернули отчет на последний столбец 
+                {
+                    if (j == i)   // Диоганаль от конца к началу
+                        a[i, j] = 1;   
+                    if (j!=i)        // Пространство от конца к диоганали
+                        a[i, j] = 2;
+                    if (j > i)
+                        a[i, j] = 0;  //Пространцсво над диоганалью
+                    Console.Write(a[i,j]+" ");
+                }
+                Console.WriteLine();
+            }
+			
+			
+			
+			
+			
+			Симметричная ли матрица?
+			Проверьте, является ли двумерный массив симметричным относительно главной диагонали. 
+			Главная диагональ — та, которая идёт из левого верхнего угла двумерного массива в правый нижний.
+			
+			
+			int n = Convert.ToInt32(Console.ReadLine());
+            int[,] a = new int[n,n];
+            for (int i = 0; i < n; i++)
+            {
+                string s = Console.ReadLine();
+                string[] ss = s.Split(' ');
+                for (int j = 0; j < n; j++)
+                {
+                    a[i, j] = Convert.ToInt32(ss[j]);
+                }
+            }
+            int b = 0;
+            for (int i = 0; i < n; i++)
+            {
+                for (int j = 0; j < n; j++)
+                {
+                    if (a[i, j] == a[j, i]) // Проверка на Симметрию!!!
+                    {
+                        b++;
+                    }            
+                }
+            }
+            if(b == n*n)                     // Колличество совпадений рано N в квадрате!!!
+                Console.WriteLine("YES");
+            else
+                Console.WriteLine("NO");
+				
+				
+				
+				
+			Таблица умножения 	
+			Программа получает на вход строку, в которой через пробел даны два числа n и mm – количество строк и столбцов, соответственно.
+			string[] s = Console.ReadLine().Split();
+            int n = Convert.ToInt32(s[0]), m = Convert.ToInt32(s[1]);
+           
+            int[,] a = new int[n, m];
+
+            for (int i = 0; i < n; i++)
+            {
+                for (int j = 0; j < m; j++)
+                {
+                    a[i, j] = (i+1) * (j+1);
+                    Console.Write(a[i,j]+" ");
+                                
+                }
+                Console.WriteLine();
+            }
+			
+			
+			
+			
+			Треугольник Паскаля
+			Даны два числа nn и mm. Создайте двумерный массив A[n,m]A[n,m] и заполните его по следующим правилам: 
+			Числа, стоящие в строке 0 или в столбце 0 равны 1. 
+			Для всех остальных элементов массива- элемент равен сумме двух элементов, стоящих слева и сверху от него.
+			
+			
+			string[] s = Console.ReadLine().Split();
+            int n = Convert.ToInt32(s[0]), m = Convert.ToInt32(s[1]);
+            int[,] a = new int[n, m];
+            for (int i = 0; i <n; i++)
+            {
+                for (int j = 0; j <m; j++)
+                {
+                    if (i == 0 )
+                        a[i, j] = 1;
+                    if (j==0)
+                        a[i, j] = 1;
+                    if (i > 0 && j > 0)
+                        a[i, j] = a[i, j - 1] + a[i - 1, j];
+                    Console.Write(a[i,j]+" ");
+                                
+                }
+                Console.WriteLine();
+            }
+			
+			
+			
+			Программа должна определить максимальную сумму чисел в одной строке и вывести на экран эту сумму и номер строки, для которой достигается эта сумма.
+			Программа получает на вход два числа n и m, являющиеся числом строк и столбцов в массиве. 
+			Далее во входном потоке идет n строк по m чисел, являющихся элементами массива.
+			string[] s = Console.ReadLine().Split();
+            int n = Convert.ToInt32(s[0]), m = Convert.ToInt32(s[1]);
+            int[,] a = new int[n, m];
+            for (int i = 0; i < n; i++)
+            {
+                string s1 = Console.ReadLine();
+                string[] ss = s1.Split(' ');
+                for (int j = 0; j < m; j++)
+                {
+                    a[i, j] = Convert.ToInt32(ss[j]);
+                }
+            }
+            int max = 0;
+            int indexMax = 0;
+            for (int i = 0; i <n; i++)
+            {
+                int b = 0;
+                for (int j = 0; j <m; j++)
+                {
+                    if(i>=0)
+                    b += a[i, j];
+            
+                }
+                if (b > max)
+                {
+                    max = b;
+                    indexMax = i;
+                }
+               
+            }
+            Console.WriteLine(max);
+            Console.WriteLine(indexMax);
+			
+			
+			ПРОВЕРОЧНЫЙ ТЕСТ !!!
+			
+			
+			
+			Четные и количество
+			Дано целое число NN и набор из NN целых чисел. Вывести все четные числа из данного набора и кол-во таких чисел.
+			int n = Convert.ToInt32(Console.ReadLine());
+            string s = Console.ReadLine();
+            string[] ss = s.Split(' ');
+            int[] numbers = new int[n];
+            int a = 0;
+            for (int i = 0; i < n; i++)
+            {
+                int number = Convert.ToInt32(ss[i]);
+                numbers[i] = number;
+                if (number % 2 == 0)
+                {
+                    a++;
+                    Console.Write(numbers[i] + " ");
+                    
+                }
+               
+            }
+            Console.WriteLine();
+            Console.WriteLine(a);
+
+             Console.WriteLine("\n" + cnt);  //ВАРИАНТ ПЕРЕНОСА НА СЛЕДУЮЩУЮ СТРОКУ
+
+
+
+
+
+			Меньше следующего.
+			Дан массив, состоящий из целых чисел. 
+			Напишите программу, которая подсчитает количество элементов массива, которые меньше следующего за ним элемента.
+			int n = Convert.ToInt32(Console.ReadLine());
+            string s = Console.ReadLine();
+            string[] ss = s.Split(' ');
+            int[] numbers = new int[n];
+            int c = 0;
+            for (int i = 0; i <n; i++)
+            {
+                int number = Convert.ToInt32(ss[i]);
+                numbers[i] = number;
+                if (i>0 && numbers[i] > numbers[i-1])
+                {
+                    c++;
+                }
+            }
+            Console.Write(c);
+			
+			
+			
+			
+			
+			Количество элементов по условию //ПРИРАВНИВАНИЕ ЗАМЕНЫ
+			Дан список положительных целых чисел. 
+			Найдите все числа кратные 33 и при этом оканчивающиеся на 77, и замените каждое из этих чисел на их количество в массиве.
+			int n = Convert.ToInt32(Console.ReadLine());
+            string s = Console.ReadLine();
+            string[] ss = s.Split(' ');
+            int[] numbers = new int[n];
+            int a = 0;
+            for (int i = 0; i < n; i++)
+            {
+                int number = Convert.ToInt32(ss[i]);
+                numbers[i] = number;  
+            }
+            for (int i = 0; i < n; i++)
+            {
+                if (numbers[i] % 3 == 0 && numbers[i] % 10 == 7)
+                { 
+                    a++;
+                }
+            }
+            for (int i = 0; i < n; i++)
+            {
+                if (numbers[i] % 3 == 0 && numbers[i] % 10 == 7) // ПРИРАВНИВАНИЕ ЗАМЕНЫ!!!
+                    numbers[i] = a;
+                Console.Write(numbers[i] + " ");
+            }
